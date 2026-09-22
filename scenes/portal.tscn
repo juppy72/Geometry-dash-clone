@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cl8jid3nyyxqm"]
+
+[ext_resource type="Script" uid="uid://b4v2u6w5mkwqd" path="res://scripts/portal.gd" id="1_jr6l0"]
+[ext_resource type="Texture2D" uid="uid://bxr2dnygb7jx0" path="res://Sprites/cube.png" id="2_d4jfq"]
+[ext_resource type="Texture2D" uid="uid://bcx124fwiqphy" path="res://Sprites/ship.png" id="3_dyed0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d4jfq")
+}],
+"loop": 1,
+"name": &"cube",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dyed0")
+}],
+"loop": 1,
+"name": &"ship",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(200, 336)
+
+[node name="Area2D" type="Area2D" unique_id=193080962]
+script = ExtResource("1_jr6l0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=193705488]
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"cube"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=942119836]
+z_index = -1
+position = Vector2(5, -2)
+shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

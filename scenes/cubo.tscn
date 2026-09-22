@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bu34j1hhssmlm"]
+
+[ext_resource type="Script" uid="uid://cxmwfgl4p627j" path="res://scenes/cubo.gd" id="1_t4y38"]
+[ext_resource type="Texture2D" uid="uid://w2mbkwojimn6" path="res://Sprites/cubo/Player (Cube)/player_01-hd.png" id="1_ue4r5"]
+[ext_resource type="Texture2D" uid="uid://bbsj203rby5um" path="res://Sprites/ship/Ship/ship_01-hd.png" id="3_2wega"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(7, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ue4r5")
+}],
+"loop": 1,
+"name": &"cube",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2wega")
+}],
+"loop": 1,
+"name": &"ship",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=851301466]
+script = ExtResource("1_t4y38")
+
+[node name="groundbox" type="CollisionShape2D" parent="." unique_id=720453238]
+shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(0.8152226, 0.0019209945, 0.9726433, 0.41960785)
+
+[node name="collibox" type="Area2D" parent="." unique_id=1956451581]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collibox" unique_id=2015483795]
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="spixebox" type="Area2D" parent="." unique_id=1495330672]
+
+[node name="groundbox" type="CollisionShape2D" parent="spixebox" unique_id=562366681]
+shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(0.9970785, 0, 0.14578402, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=371522200]
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"cube"
+
+[connection signal="area_entered" from="collibox" to="." method="_on_collibox_area_entered"]
+[connection signal="area_entered" from="spixebox" to="." method="_on_spixebox_area_entered"]
+[connection signal="body_entered" from="spixebox" to="." method="_on_spixebox_body_entered"]

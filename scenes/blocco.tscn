@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cjgwpgqd05i62"]
+
+[ext_resource type="Script" uid="uid://cu7t15crbi4wa" path="res://scripts/cubo.gd" id="1_krydl"]
+[ext_resource type="Texture2D" uid="uid://crisi6i27ni1h" path="res://Sprites/images.png" id="2_pgwe2"]
+[ext_resource type="Script" uid="uid://cgalrfh4t7y0f" path="res://scripts/67.gd" id="3_46ant"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(122, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(122, 114.33333)
+
+[node name="blocco" type="StaticBody2D" unique_id=113729115]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_krydl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1003771569]
+shape = SubResource("RectangleShape2D_g4v7s")
+one_way_collision = true
+
+[node name="Images" type="Sprite2D" parent="." unique_id=1248586805]
+texture = ExtResource("2_pgwe2")
+
+[node name="67" type="Area2D" parent="." unique_id=1016880524]
+script = ExtResource("3_46ant")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="67" unique_id=247244387]
+position = Vector2(0, 3.833334)
+shape = SubResource("RectangleShape2D_yf5fn")
+one_way_collision = true

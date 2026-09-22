@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dk645tcxkg7bt"]
+
+[ext_resource type="Script" uid="uid://ct18aya0qbgxj" path="res://scripts/spiky__)))).gd" id="1_1xda0"]
+[ext_resource type="Texture2D" uid="uid://bj3xvjynlk6tq" path="res://Sprites/Senza titolo.png" id="2_jblqk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(6, 11)
+
+[node name="SPIKY _))))" type="Area2D" unique_id=619120803]
+script = ExtResource("1_1xda0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1856562024]
+z_index = 1
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="SenzaTitolo" type="Sprite2D" parent="." unique_id=426888199]
+position = Vector2(5.04871e-29, 1.1920929e-07)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_jblqk")

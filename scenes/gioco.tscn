@@ -1,0 +1,792 @@
+[gd_scene format=3 uid="uid://broh3q1dq84en"]
+
+[ext_resource type="Texture2D" uid="uid://dke1swqv20kbq" path="res://Sprites/PC _ Computer - Geometry Dash - Backgrounds and Grounds - Ground 1.png" id="1_ygxh2"]
+[ext_resource type="PackedScene" uid="uid://dawwh40qggp0l" path="res://scenes/col_trigger.tscn" id="2_dsoax"]
+[ext_resource type="PackedScene" uid="uid://bu34j1hhssmlm" path="res://scenes/cubo.tscn" id="2_j3685"]
+[ext_resource type="AudioStream" uid="uid://cqn6yydyydlls" path="res://Forever Bound - Stereo Madness.mp3" id="4_3ho0f"]
+[ext_resource type="PackedScene" uid="uid://dk645tcxkg7bt" path="res://scenes/spiky__)))).tscn" id="5_r0aqr"]
+[ext_resource type="PackedScene" uid="uid://cjgwpgqd05i62" path="res://scenes/blocco.tscn" id="6_gp72k"]
+[ext_resource type="PackedScene" uid="uid://cl8jid3nyyxqm" path="res://scenes/portal.tscn" id="7_dsoax"]
+[ext_resource type="Texture2D" uid="uid://dxl8adgw2k0if" path="res://Sprites/gold - you won.png" id="8_gndb8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(1576, 511)
+
+[sub_resource type="GDScript" id="GDScript_g4v7s"]
+script/source = "extends Camera2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if get_parent().has_node(\"CharacterBody2D\"):
+		var coso = get_parent().get_node(\"CharacterBody2D\")
+		self.position.x = coso.position.x
+"
+
+[node name="Node2D" type="Node2D" unique_id=2128927903]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=893163311]
+position = Vector2(612, 801)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2073960885]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D" unique_id=1441828148]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2023647476]
+position = Vector2(2197, 801)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=955693711]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D2" unique_id=992159190]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+position = Vector2(37, 18)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=273893947]
+position = Vector2(3746, 801)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1373284391]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D3" unique_id=690368654]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=201882628]
+position = Vector2(4963, 801)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=2001671307]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D4" unique_id=16232523]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=403263802]
+position = Vector2(6419, 801)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1199278419]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D5" unique_id=1716777457]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1491637163]
+position = Vector2(8007, 793)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=827121810]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D6" unique_id=563935339]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=899565598]
+position = Vector2(7968, -74)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1005234391]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D7" unique_id=93435664]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=608777730]
+position = Vector2(9530, 787)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=1314740706]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D8" unique_id=1505637878]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=768205805]
+position = Vector2(9491, -80)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" unique_id=256480962]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D9" unique_id=1957042909]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=2106732583]
+position = Vector2(11101, 787)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=813741466]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D10" unique_id=1121758213]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="." unique_id=2030004899]
+position = Vector2(11062, -80)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11" unique_id=1048126033]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D11" unique_id=368428594]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="." unique_id=1928877827]
+position = Vector2(12575, 765)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12" unique_id=820605370]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D12" unique_id=1378079462]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="." unique_id=1628941010]
+position = Vector2(12536, -102)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13" unique_id=1813200278]
+position = Vector2(-11, -1.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PcComputerGeometryDashBackgroundsAndGroundsGround1" type="Sprite2D" parent="StaticBody2D13" unique_id=303756113]
+modulate = Color(0.09726203, 0.28067714, 0.99674135, 1)
+scale = Vector2(3.4096775, 1)
+texture = ExtResource("1_ygxh2")
+hframes = 2
+frame = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=71445591]
+position = Vector2(21, 380)
+scale = Vector2(2, 2)
+script = SubResource("GDScript_g4v7s")
+
+[node name="CharacterBody2D" parent="." unique_id=851301466 instance=ExtResource("2_j3685")]
+position = Vector2(21, 523)
+scale = Vector2(2, 2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=647686600]
+stream = ExtResource("4_3ho0f")
+autoplay = true
+
+[node name="SPIKY _))))" parent="." unique_id=619120803 instance=ExtResource("5_r0aqr")]
+position = Vector2(556, 524)
+
+[node name="SPIKY _))))2" parent="." unique_id=1680538393 instance=ExtResource("5_r0aqr")]
+position = Vector2(983, 525)
+
+[node name="SPIKY _))))3" parent="." unique_id=177458838 instance=ExtResource("5_r0aqr")]
+position = Vector2(1020, 525)
+
+[node name="SPIKY _))))4" parent="." unique_id=532842375 instance=ExtResource("5_r0aqr")]
+position = Vector2(1595, 525)
+
+[node name="SPIKY _))))5" parent="." unique_id=371262791 instance=ExtResource("5_r0aqr")]
+position = Vector2(1635, 525)
+
+[node name="SPIKY _))))6" parent="." unique_id=52250960 instance=ExtResource("5_r0aqr")]
+position = Vector2(1719, 525)
+
+[node name="SPIKY _))))7" parent="." unique_id=1870919433 instance=ExtResource("5_r0aqr")]
+position = Vector2(1751, 525)
+
+[node name="SPIKY _))))8" parent="." unique_id=65481537 instance=ExtResource("5_r0aqr")]
+position = Vector2(1785, 525)
+
+[node name="SPIKY _))))9" parent="." unique_id=562704187 instance=ExtResource("5_r0aqr")]
+position = Vector2(1658, 525)
+
+[node name="SPIKY _))))10" parent="." unique_id=1500546423 instance=ExtResource("5_r0aqr")]
+position = Vector2(1851, 525)
+
+[node name="SPIKY _))))11" parent="." unique_id=832519626 instance=ExtResource("5_r0aqr")]
+position = Vector2(1891, 525)
+
+[node name="SPIKY _))))12" parent="." unique_id=1676252019 instance=ExtResource("5_r0aqr")]
+position = Vector2(1521, 525)
+
+[node name="SPIKY _))))13" parent="." unique_id=706329502 instance=ExtResource("5_r0aqr")]
+position = Vector2(1487, 525)
+
+[node name="SPIKY _))))14" parent="." unique_id=933133486 instance=ExtResource("5_r0aqr")]
+position = Vector2(2620, 488)
+
+[node name="SPIKY _))))15" parent="." unique_id=1350794721 instance=ExtResource("5_r0aqr")]
+position = Vector2(3048, 460)
+
+[node name="SPIKY _))))16" parent="." unique_id=1093910458 instance=ExtResource("5_r0aqr")]
+position = Vector2(3455, 414)
+
+[node name="SPIKY _))))17" parent="." unique_id=2050062206 instance=ExtResource("5_r0aqr")]
+position = Vector2(3714, 521)
+
+[node name="SPIKY _))))18" parent="." unique_id=734879973 instance=ExtResource("5_r0aqr")]
+position = Vector2(3746, 521)
+
+[node name="SPIKY _))))19" parent="." unique_id=12469303 instance=ExtResource("5_r0aqr")]
+position = Vector2(3782, 521)
+
+[node name="SPIKY _))))20" parent="." unique_id=1926194156 instance=ExtResource("5_r0aqr")]
+position = Vector2(3816, 521)
+
+[node name="SPIKY _))))21" parent="." unique_id=1987711553 instance=ExtResource("5_r0aqr")]
+position = Vector2(3856, 521)
+
+[node name="SPIKY _))))22" parent="." unique_id=1902566823 instance=ExtResource("5_r0aqr")]
+position = Vector2(3891, 521)
+
+[node name="SPIKY _))))23" parent="." unique_id=28830379 instance=ExtResource("5_r0aqr")]
+position = Vector2(3923, 521)
+
+[node name="SPIKY _))))24" parent="." unique_id=760140431 instance=ExtResource("5_r0aqr")]
+position = Vector2(3959, 521)
+
+[node name="SPIKY _))))25" parent="." unique_id=1157653055 instance=ExtResource("5_r0aqr")]
+position = Vector2(3993, 521)
+
+[node name="SPIKY _))))26" parent="." unique_id=511915987 instance=ExtResource("5_r0aqr")]
+position = Vector2(4033, 521)
+
+[node name="SPIKY _))))27" parent="." unique_id=1936882395 instance=ExtResource("5_r0aqr")]
+position = Vector2(4069, 521)
+
+[node name="SPIKY _))))28" parent="." unique_id=1514432040 instance=ExtResource("5_r0aqr")]
+position = Vector2(4101, 521)
+
+[node name="SPIKY _))))29" parent="." unique_id=1895615883 instance=ExtResource("5_r0aqr")]
+position = Vector2(4137, 521)
+
+[node name="SPIKY _))))30" parent="." unique_id=1104179138 instance=ExtResource("5_r0aqr")]
+position = Vector2(4171, 521)
+
+[node name="SPIKY _))))31" parent="." unique_id=1432568400 instance=ExtResource("5_r0aqr")]
+position = Vector2(4211, 521)
+
+[node name="SPIKY _))))32" parent="." unique_id=1140355441 instance=ExtResource("5_r0aqr")]
+position = Vector2(4231, 521)
+
+[node name="SPIKY _))))33" parent="." unique_id=457923399 instance=ExtResource("5_r0aqr")]
+position = Vector2(4267, 521)
+
+[node name="SPIKY _))))34" parent="." unique_id=1373636731 instance=ExtResource("5_r0aqr")]
+position = Vector2(4301, 521)
+
+[node name="SPIKY _))))35" parent="." unique_id=1241970932 instance=ExtResource("5_r0aqr")]
+position = Vector2(4341, 521)
+
+[node name="SPIKY _))))36" parent="." unique_id=2115935544 instance=ExtResource("5_r0aqr")]
+position = Vector2(4377, 521)
+
+[node name="SPIKY _))))37" parent="." unique_id=2062850571 instance=ExtResource("5_r0aqr")]
+position = Vector2(4409, 521)
+
+[node name="SPIKY _))))38" parent="." unique_id=1524064926 instance=ExtResource("5_r0aqr")]
+position = Vector2(4445, 521)
+
+[node name="SPIKY _))))39" parent="." unique_id=48310575 instance=ExtResource("5_r0aqr")]
+position = Vector2(4479, 521)
+
+[node name="SPIKY _))))40" parent="." unique_id=1795844510 instance=ExtResource("5_r0aqr")]
+position = Vector2(4519, 521)
+
+[node name="SPIKY _))))41" parent="." unique_id=2024927760 instance=ExtResource("5_r0aqr")]
+position = Vector2(4519, 314)
+
+[node name="SPIKY _))))42" parent="." unique_id=446436135 instance=ExtResource("5_r0aqr")]
+position = Vector2(4557, 314)
+
+[node name="SPIKY _))))43" parent="." unique_id=1992365346 instance=ExtResource("5_r0aqr")]
+position = Vector2(4595, 314)
+
+[node name="SPIKY _))))44" parent="." unique_id=1148633594 instance=ExtResource("5_r0aqr")]
+position = Vector2(4632, 314)
+
+[node name="blocco" parent="." unique_id=113729115 instance=ExtResource("6_gp72k")]
+position = Vector2(1557, 526)
+
+[node name="blocco2" parent="." unique_id=51980888 instance=ExtResource("6_gp72k")]
+position = Vector2(1687, 526)
+
+[node name="blocco3" parent="." unique_id=582534880 instance=ExtResource("6_gp72k")]
+position = Vector2(1687, 490)
+
+[node name="blocco4" parent="." unique_id=1382408618 instance=ExtResource("6_gp72k")]
+position = Vector2(1812, 490)
+
+[node name="blocco5" parent="." unique_id=1751813556 instance=ExtResource("6_gp72k")]
+position = Vector2(1812.0001, 529)
+
+[node name="blocco6" parent="." unique_id=1872943384 instance=ExtResource("6_gp72k")]
+position = Vector2(1812.0001, 455)
+
+[node name="blocco7" parent="." unique_id=29637959 instance=ExtResource("6_gp72k")]
+position = Vector2(2832, 526)
+scale = Vector2(6.78, 0.3)
+
+[node name="blocco8" parent="." unique_id=788318081 instance=ExtResource("6_gp72k")]
+position = Vector2(3228, 492.00003)
+scale = Vector2(6.78, 0.3)
+
+[node name="blocco9" parent="." unique_id=1153200844 instance=ExtResource("6_gp72k")]
+position = Vector2(3457.9998, 454)
+scale = Vector2(3.8600004, 0.3)
+
+[node name="blocco10" parent="." unique_id=757606180 instance=ExtResource("6_gp72k")]
+position = Vector2(3816, 412)
+scale = Vector2(0.3, 0.18000004)
+
+[node name="blocco11" parent="." unique_id=1936969808 instance=ExtResource("6_gp72k")]
+position = Vector2(3953.0002, 382)
+scale = Vector2(0.3, 0.18000004)
+
+[node name="blocco12" parent="." unique_id=757868467 instance=ExtResource("6_gp72k")]
+position = Vector2(4087, 351.99997)
+scale = Vector2(0.3, 0.18000004)
+
+[node name="blocco43" parent="." unique_id=1082309756 instance=ExtResource("6_gp72k")]
+position = Vector2(6560, 421.00003)
+scale = Vector2(0.3, 0.18000004)
+
+[node name="blocco44" parent="." unique_id=1602198993 instance=ExtResource("6_gp72k")]
+position = Vector2(6697, 391.00003)
+scale = Vector2(0.3, 0.18000004)
+
+[node name="blocco45" parent="." unique_id=854969942 instance=ExtResource("6_gp72k")]
+position = Vector2(6831, 361)
+scale = Vector2(0.3, 0.18000004)
+
+[node name="blocco13" parent="." unique_id=469884581 instance=ExtResource("6_gp72k")]
+position = Vector2(4217, 325)
+scale = Vector2(0.3, 0.18000004)
+
+[node name="blocco15" parent="." unique_id=1919779912 instance=ExtResource("6_gp72k")]
+position = Vector2(4557, 275)
+scale = Vector2(0.3, 0.10000004)
+
+[node name="blocco16" parent="." unique_id=1692230305 instance=ExtResource("6_gp72k")]
+position = Vector2(4595, 275)
+scale = Vector2(0.3, 0.10000004)
+
+[node name="SPIKY _))))45" parent="." unique_id=1125765625 instance=ExtResource("5_r0aqr")]
+position = Vector2(4753, 314)
+
+[node name="SPIKY _))))49" parent="." unique_id=1301421095 instance=ExtResource("5_r0aqr")]
+position = Vector2(5038, 251)
+
+[node name="SPIKY _))))50" parent="." unique_id=741741496 instance=ExtResource("5_r0aqr")]
+position = Vector2(5075, 251)
+
+[node name="SPIKY _))))51" parent="." unique_id=1139910063 instance=ExtResource("5_r0aqr")]
+position = Vector2(5111, 251)
+
+[node name="SPIKY _))))52" parent="." unique_id=1948282432 instance=ExtResource("5_r0aqr")]
+position = Vector2(5145, 251)
+
+[node name="SPIKY _))))53" parent="." unique_id=395525655 instance=ExtResource("5_r0aqr")]
+position = Vector2(5427, 299)
+
+[node name="SPIKY _))))54" parent="." unique_id=2114585052 instance=ExtResource("5_r0aqr")]
+position = Vector2(5469, 354)
+
+[node name="SPIKY _))))55" parent="." unique_id=1448272268 instance=ExtResource("5_r0aqr")]
+position = Vector2(5922, 382)
+
+[node name="SPIKY _))))46" parent="." unique_id=1714796074 instance=ExtResource("5_r0aqr")]
+position = Vector2(4791, 314)
+
+[node name="SPIKY _))))47" parent="." unique_id=2001515096 instance=ExtResource("5_r0aqr")]
+position = Vector2(4829, 314)
+
+[node name="SPIKY _))))48" parent="." unique_id=1705760358 instance=ExtResource("5_r0aqr")]
+position = Vector2(4866, 314)
+
+[node name="blocco17" parent="." unique_id=2053026562 instance=ExtResource("6_gp72k")]
+position = Vector2(4791, 275)
+scale = Vector2(0.3, 0.10000004)
+
+[node name="blocco18" parent="." unique_id=678234928 instance=ExtResource("6_gp72k")]
+position = Vector2(4829, 275)
+scale = Vector2(0.3, 0.10000004)
+
+[node name="blocco14" parent="." unique_id=1802380405 instance=ExtResource("6_gp72k")]
+position = Vector2(4654, 433)
+scale = Vector2(5.0600004, 1.7399988)
+
+[node name="blocco19" parent="." unique_id=590652733 instance=ExtResource("6_gp72k")]
+position = Vector2(5120, 463)
+scale = Vector2(3.0200005, 1.7399988)
+
+[node name="blocco20" parent="." unique_id=2114336039 instance=ExtResource("6_gp72k")]
+position = Vector2(5344.0005, 433.00003)
+scale = Vector2(1.6872796, 1.87727)
+
+[node name="blocco21" parent="." unique_id=76236311 instance=ExtResource("6_gp72k")]
+position = Vector2(5515, 491)
+scale = Vector2(1.6872796, 1.87727)
+
+[node name="blocco26" parent="." unique_id=1169892848 instance=ExtResource("6_gp72k")]
+position = Vector2(5604, 388)
+scale = Vector2(1.2472796, 0.19727004)
+
+[node name="COL TRIGGER" parent="." unique_id=355813675 instance=ExtResource("2_dsoax")]
+position = Vector2(2234, 433)
+
+[node name="blocco22" parent="." unique_id=1038812301 instance=ExtResource("6_gp72k")]
+position = Vector2(5038, 275)
+scale = Vector2(0.3, 0.1)
+
+[node name="blocco23" parent="." unique_id=532427714 instance=ExtResource("6_gp72k")]
+position = Vector2(5075, 275)
+scale = Vector2(0.3, 0.1)
+
+[node name="blocco24" parent="." unique_id=1460305362 instance=ExtResource("6_gp72k")]
+position = Vector2(5111, 275)
+scale = Vector2(0.3, 0.1)
+
+[node name="blocco25" parent="." unique_id=1992400598 instance=ExtResource("6_gp72k")]
+position = Vector2(5147, 275)
+scale = Vector2(0.3, 0.1)
+
+[node name="blocco27" parent="." unique_id=1746683930 instance=ExtResource("6_gp72k")]
+position = Vector2(5863.9995, 412)
+scale = Vector2(1.2472796, 0.19727004)
+
+[node name="SPIKY _))))56" parent="." unique_id=1240105500 instance=ExtResource("5_r0aqr")]
+position = Vector2(6157.0005, 418)
+
+[node name="blocco28" parent="." unique_id=2115292394 instance=ExtResource("6_gp72k")]
+position = Vector2(6099, 448)
+scale = Vector2(1.2472796, 0.19727004)
+
+[node name="blocco29" parent="." unique_id=970774310 instance=ExtResource("6_gp72k")]
+position = Vector2(6273, 458)
+scale = Vector2(0.3, 0.10000001)
+
+[node name="blocco30" parent="." unique_id=227125192 instance=ExtResource("6_gp72k")]
+position = Vector2(6308, 458)
+scale = Vector2(0.3, 0.10000001)
+
+[node name="blocco31" parent="." unique_id=1395478420 instance=ExtResource("6_gp72k")]
+position = Vector2(6339, 458)
+scale = Vector2(0.3, 0.10000001)
+
+[node name="blocco32" parent="." unique_id=638596843 instance=ExtResource("6_gp72k")]
+position = Vector2(6371, 458)
+scale = Vector2(0.3, 0.10000001)
+
+[node name="blocco33" parent="." unique_id=859530492 instance=ExtResource("6_gp72k")]
+position = Vector2(6405, 458)
+scale = Vector2(0.3, 0.10000001)
+
+[node name="blocco34" parent="." unique_id=1921768706 instance=ExtResource("6_gp72k")]
+position = Vector2(6434, 458)
+scale = Vector2(0.3, 0.10000001)
+
+[node name="blocco38" parent="." unique_id=1999594342 instance=ExtResource("6_gp72k")]
+position = Vector2(6926, 486.99997)
+scale = Vector2(0.8237321, 1.0927489)
+
+[node name="blocco39" parent="." unique_id=61417332 instance=ExtResource("6_gp72k")]
+position = Vector2(7258, 500.00003)
+scale = Vector2(4.830789, 1.2931849)
+
+[node name="blocco42" parent="." unique_id=1316065180 instance=ExtResource("6_gp72k")]
+position = Vector2(7344, 498.00003)
+scale = Vector2(4.830789, 1.2931849)
+
+[node name="blocco40" parent="." unique_id=1971085621 instance=ExtResource("6_gp72k")]
+position = Vector2(7176, 281.00003)
+scale = Vector2(3.5837321, 1.0927489)
+
+[node name="blocco41" parent="." unique_id=183382043 instance=ExtResource("6_gp72k")]
+position = Vector2(7369, 292.00003)
+scale = Vector2(3.5837321, 1.0927489)
+
+[node name="COL TRIGGER2" parent="." unique_id=1033160365 instance=ExtResource("2_dsoax")]
+position = Vector2(6903, 379)
+mio_colore = Color(0, 0, 0, 1)
+tempo = 1.0
+
+[node name="Area2D" parent="." unique_id=193080962 instance=ExtResource("7_dsoax")]
+position = Vector2(7508, 393)
+scale = Vector2(0.2, 0.2)
+mode = "ship"
+
+[node name="COL TRIGGER3" parent="." unique_id=315056615 instance=ExtResource("2_dsoax")]
+position = Vector2(7502, 373)
+mio_colore = Color(1, 0.06666667, 0.50980395, 1)
+
+[node name="blocco35" parent="." unique_id=1706523751 instance=ExtResource("6_gp72k")]
+position = Vector2(8155, 507)
+scale = Vector2(0.3, 1.6200001)
+
+[node name="blocco36" parent="." unique_id=1236004650 instance=ExtResource("6_gp72k")]
+position = Vector2(8586, 219.00003)
+scale = Vector2(0.3, 1.6200001)
+
+[node name="SPIKY _))))57" parent="." unique_id=184494939 instance=ExtResource("5_r0aqr")]
+position = Vector2(8796, 510)
+
+[node name="SPIKY _))))58" parent="." unique_id=951422478 instance=ExtResource("5_r0aqr")]
+position = Vector2(8833, 513)
+
+[node name="SPIKY _))))59" parent="." unique_id=1248934845 instance=ExtResource("5_r0aqr")]
+position = Vector2(8873, 513)
+
+[node name="SPIKY _))))60" parent="." unique_id=1089756064 instance=ExtResource("5_r0aqr")]
+position = Vector2(8913, 513)
+
+[node name="SPIKY _))))61" parent="." unique_id=659061983 instance=ExtResource("5_r0aqr")]
+position = Vector2(8950, 516)
+
+[node name="SPIKY _))))62" parent="." unique_id=1047527085 instance=ExtResource("5_r0aqr")]
+position = Vector2(8982, 510)
+
+[node name="SPIKY _))))63" parent="." unique_id=868007 instance=ExtResource("5_r0aqr")]
+position = Vector2(9019, 513)
+
+[node name="SPIKY _))))64" parent="." unique_id=257166340 instance=ExtResource("5_r0aqr")]
+position = Vector2(9059, 513)
+
+[node name="SPIKY _))))65" parent="." unique_id=913015378 instance=ExtResource("5_r0aqr")]
+position = Vector2(9099, 513)
+
+[node name="SPIKY _))))66" parent="." unique_id=1376865104 instance=ExtResource("5_r0aqr")]
+position = Vector2(9136, 516)
+
+[node name="SPIKY _))))67" parent="." unique_id=852474392 instance=ExtResource("5_r0aqr")]
+position = Vector2(9168, 510)
+
+[node name="SPIKY _))))68" parent="." unique_id=982186778 instance=ExtResource("5_r0aqr")]
+position = Vector2(9205, 513)
+
+[node name="SPIKY _))))69" parent="." unique_id=1953180445 instance=ExtResource("5_r0aqr")]
+position = Vector2(9245, 513)
+
+[node name="SPIKY _))))70" parent="." unique_id=532068418 instance=ExtResource("5_r0aqr")]
+position = Vector2(9285, 513)
+
+[node name="SPIKY _))))71" parent="." unique_id=271893075 instance=ExtResource("5_r0aqr")]
+position = Vector2(9322, 516)
+
+[node name="SPIKY _))))72" parent="." unique_id=1474499131 instance=ExtResource("5_r0aqr")]
+position = Vector2(8796, 181)
+rotation = 3.12482
+
+[node name="SPIKY _))))73" parent="." unique_id=409412460 instance=ExtResource("5_r0aqr")]
+position = Vector2(8833, 184)
+rotation = 3.12482
+
+[node name="SPIKY _))))74" parent="." unique_id=438378891 instance=ExtResource("5_r0aqr")]
+position = Vector2(8873, 184)
+rotation = 3.12482
+
+[node name="SPIKY _))))75" parent="." unique_id=1955727927 instance=ExtResource("5_r0aqr")]
+position = Vector2(8913, 184)
+rotation = 3.12482
+
+[node name="SPIKY _))))76" parent="." unique_id=1100892938 instance=ExtResource("5_r0aqr")]
+position = Vector2(8950, 187)
+rotation = 3.12482
+
+[node name="SPIKY _))))77" parent="." unique_id=1937037193 instance=ExtResource("5_r0aqr")]
+position = Vector2(8982, 181)
+rotation = 3.12482
+
+[node name="SPIKY _))))78" parent="." unique_id=255604524 instance=ExtResource("5_r0aqr")]
+position = Vector2(9019, 184)
+rotation = 3.12482
+
+[node name="SPIKY _))))79" parent="." unique_id=1683600190 instance=ExtResource("5_r0aqr")]
+position = Vector2(9059, 184)
+rotation = 3.12482
+
+[node name="SPIKY _))))80" parent="." unique_id=480011128 instance=ExtResource("5_r0aqr")]
+position = Vector2(9099, 184)
+rotation = 3.12482
+
+[node name="SPIKY _))))81" parent="." unique_id=361149010 instance=ExtResource("5_r0aqr")]
+position = Vector2(9136, 187)
+rotation = 3.12482
+
+[node name="SPIKY _))))82" parent="." unique_id=134190532 instance=ExtResource("5_r0aqr")]
+position = Vector2(9168, 181)
+rotation = 3.12482
+
+[node name="SPIKY _))))83" parent="." unique_id=558349573 instance=ExtResource("5_r0aqr")]
+position = Vector2(9205, 184)
+rotation = 3.12482
+
+[node name="SPIKY _))))84" parent="." unique_id=1335169388 instance=ExtResource("5_r0aqr")]
+position = Vector2(9245, 184)
+rotation = 3.12482
+
+[node name="SPIKY _))))85" parent="." unique_id=191726263 instance=ExtResource("5_r0aqr")]
+position = Vector2(9285, 184)
+rotation = 3.12482
+
+[node name="SPIKY _))))86" parent="." unique_id=1079493241 instance=ExtResource("5_r0aqr")]
+position = Vector2(9322, 187)
+rotation = 3.12482
+
+[node name="blocco37" parent="." unique_id=447037920 instance=ExtResource("6_gp72k")]
+position = Vector2(9674, 515)
+scale = Vector2(0.3, 1.26)
+
+[node name="blocco46" parent="." unique_id=1701928287 instance=ExtResource("6_gp72k")]
+position = Vector2(9848, 515)
+scale = Vector2(0.3, 1.26)
+
+[node name="blocco47" parent="." unique_id=1360088390 instance=ExtResource("6_gp72k")]
+position = Vector2(10007, 513)
+scale = Vector2(0.3, 1.26)
+
+[node name="blocco48" parent="." unique_id=2145582812 instance=ExtResource("6_gp72k")]
+position = Vector2(9988, 183)
+scale = Vector2(0.3, 1.26)
+
+[node name="blocco49" parent="." unique_id=510780214 instance=ExtResource("6_gp72k")]
+position = Vector2(9834, 174)
+scale = Vector2(0.3, 1.26)
+
+[node name="blocco50" parent="." unique_id=745412323 instance=ExtResource("6_gp72k")]
+position = Vector2(9660, 161.00002)
+scale = Vector2(0.3, 1.26)
+
+[node name="blocco51" parent="." unique_id=567397980 instance=ExtResource("6_gp72k")]
+position = Vector2(10560, 193.99998)
+scale = Vector2(0.3, 1.26)
+
+[node name="blocco52" parent="." unique_id=1801547047 instance=ExtResource("6_gp72k")]
+position = Vector2(10406, 184.99998)
+scale = Vector2(0.3, 1.26)
+
+[node name="blocco53" parent="." unique_id=2003256359 instance=ExtResource("6_gp72k")]
+position = Vector2(10232, 172)
+scale = Vector2(0.3, 1.26)
+
+[node name="blocco54" parent="." unique_id=165638556 instance=ExtResource("6_gp72k")]
+position = Vector2(11751, 177)
+scale = Vector2(8.46, 1.7799997)
+
+[node name="blocco55" parent="." unique_id=927489303 instance=ExtResource("6_gp72k")]
+position = Vector2(11751.001, 566)
+scale = Vector2(8.46, 1.7799997)
+
+[node name="GoldYouWon" type="Sprite2D" parent="." unique_id=1485493163]
+position = Vector2(11972, 380)
+texture = ExtResource("8_gndb8")
+
+[connection signal="area_entered" from="SPIKY _))))" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))2" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))3" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))4" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))5" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))6" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))7" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))8" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))9" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))10" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))11" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))12" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))13" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))14" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))15" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))16" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))17" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))18" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))19" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))20" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))21" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))22" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))23" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))24" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))25" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))26" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))27" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))28" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))29" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))30" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))31" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))32" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))33" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))34" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))35" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))36" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))37" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))38" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))39" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))40" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))41" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))42" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))43" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))44" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))45" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))49" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))50" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))51" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))52" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))53" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))54" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))55" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))46" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))47" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))48" to="Camera2D" method="_on_spiky___area_entered"]
+[connection signal="area_entered" from="SPIKY _))))56" to="Camera2D" method="_on_spiky___area_entered"]

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dawwh40qggp0l"]
+
+[sub_resource type="GDScript" id="GDScript_gp72k"]
+script/source = "extends Node2D
+
+@export var mio_colore: Color = Color(\"#ff0000\")
+@export var tempo: float = 0.5
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if get_parent().has_node(\"CharacterBody2D\"):
+		var coso = get_parent().get_node(\"CharacterBody2D\")
+		if coso.position.x >= position.x:
+			cambia_sfondo(mio_colore)
+
+func cambia_sfondo(nuovo_colore: Color):
+	var colore_attuale = RenderingServer.get_default_clear_color()
+
+	var tween = create_tween()
+	tween.tween_method(
+		func(colore): RenderingServer.set_default_clear_color(colore),
+		colore_attuale,
+		nuovo_colore,
+		tempo
+	)
+"
+
+[node name="COL TRIGGER" type="Node2D" unique_id=355813675]
+script = SubResource("GDScript_gp72k")
+mio_colore = Color(0.60580534, 0.066646926, 0.7195576, 1)
